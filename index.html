@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Raven Smoke</title>
+</head>
+<body class="w3-black">
+    <header>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="collection.html" class="nav-link">Collection</a></li>
+            <li class="nav-item"><a href="aboutme.html" class="nav-link">About The Artist</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Me</a></li>
+        </ul>
+    </nav>
+</header>
+</br>
+</br>
+<div class="imageSlider">
+    <img class="slide" src="images/daria-shatova-46TvM-BVrRI-unsplash.jpg">
+    <img class="slide" src="images/jari-hytonen-YCPkW_r_6uA-unsplash.jpg">
+    <img class="slide" src="images/kate-stone-matheson-uy5t-CJuIK4-unsplash.jpg">
+    <img class="slide" src="images/lloyd-henneman-mBRfYA0dYYE-unsplash.jpg">
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    <script>
+        var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("slide");
+        for (i = 0; i < x.length; i++) 
+        {
+             x[i].style.display = "none";
+        }
+         slideIndex++;
+         if (slideIndex > x.length) {slideIndex = 1}
+            x[slideIndex-1].style.display = "block";
+            setTimeout(carousel, 20000); // 2000 = Change image every 2 seconds
+        }
+    </script>
+</div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dicta itaque accusantium praesentium est nulla inventore voluptas, quos ullam commodi, id magnam aut nemo delectus debitis saepe quo, labore eos.</p>
+</body>
+</html>
